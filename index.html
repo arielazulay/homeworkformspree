@@ -1,17 +1,392 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html dir="rtl">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index Filling out forms</title>
+    <title>101</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1>טפסים יפים למינהם</h1>
 
-    <ul>
-      <li id="a-101"><a href="./Form101.html">טופס 101</a></li>
-    </ul>
+  <body>
+    <h1>כרטיס עובד</h1>
+    <h4>ובקשה להקלה ולתיאום מס על ידי המעסיק</h4>
+    <h3>שנת המס</h3>
+    <input type="date" name="dateyeartax" id="dateyeartax" />
+
+    <br /><br />
+
+    <form action="https://formspree.io/f/xayzwqrn" method="POST">
+      <fieldset id="title-1" style="background-color: bisque">
+        <p>
+          טופס זה ימולא על ידי כל עובד עם תחילת עבודתו וכן בתחילת כל שנת מס
+          (אא"כ המנהל אישר אחרת). הטופס מהווה אסמכתא למעסיק למתן הקלות במס
+          ולעריכת תיאומי מס בחישוב משכורת העובד. אם חל שינוי בפרטים - יש להצהיר
+          על כך תוך שבוע ימים.
+        </p>
+      </fieldset>
+
+      <br /><br />
+
+      <fieldset id="part-a" style="background-color: bisque">
+        <legend>א.פרטי המעסיק</legend>
+        <label for="name">שם</label>
+        <input type="text" name="name" id="name" />
+        <label for="address">כתובת</label>
+        <input type="text" name="address" id="address" />
+        <label for="tel">מספר טלפון</label>
+        <input type="tel" name="tel" id="tel" />
+        <br /><br />
+        <!-- <label for="Deductionsportfolio">מספר תיק ניכוים(הכנס 9 ספרות)</label>
+        <input
+          type="number"
+          name="Deductionsportfolio"
+          id="Deductionsportfolio"
+        /> -->
+      </fieldset>
+
+      <br /><br />
+
+      <fieldset id="part-b" style="background-color: bisque">
+        <legend>ב.פרטי העובד</legend>
+        <label for="id">מספר זהות (9 ספרות)</label>
+        <input type="number" name="idnumber" id="id" />
+        <label for="surname">שם משפחה</label>
+        <input type="text" name="surname" id="surname" />
+        <label for="firstname">שם פרטי</label>
+        <input type="text" name="firstname" id="firstname" />
+        <br /><br />
+        <label for="datebirth">תאריך לידה</label>
+        <input type="date" name="datebirth" id="datebirth" />
+        <label for="dateincrease">תאריך עליה</label>
+        <input type="date" name="dateincrease" id="dateincrease" />
+        <label for="privateaddress">כתובת פרטית</label>
+        <input type="text" name="privateaddress" id="privateaddress" />
+        <br /><br />
+        <hr />
+        <label for="gender"> מין :</label>
+        <label for="male">זכר</label>
+        <input
+          type="radio"
+          name="gender"
+          class="gender"
+          id="male"
+          value="male"
+        />
+        <label for="female">נקבה</label>
+        <input
+          type="radio"
+          name="gender"
+          class="gender"
+          id="female"
+          value="female"
+        />
+
+        <label for="maritalstatus" id="labelmarial">מצב משפחתי :</label>
+
+        <input
+          type="radio"
+          name="status"
+          class="maritalstatus"
+          id="Single"
+          value="Single"
+        />
+        <label for="Single">רווק/ה</label>
+        <input
+          type="radio"
+          name="status"
+          class="maritalstatus"
+          id="Married"
+          value="Married"
+        />
+        <label for="married">נשוי/אה</label>
+        <input
+          type="radio"
+          name="status"
+          class="maritalstatus"
+          id="divorcee"
+          value="divorcee"
+        />
+        <label for="divorcee">גרוש/ה</label>
+        <input
+          type="radio"
+          name="status"
+          class="maritalstatus"
+          id="widower"
+          value="widower"
+        />
+        <label for="widower">אלמן</label>
+        <input
+          type="radio"
+          name="status"
+          class="maritalstatus"
+          id="Separated"
+          value="Separated"
+        />
+        <label for="Separated">פרוד/ה</label>
+
+        <br /><br />
+        <label for="israeliresident"> תושב ישראל :</label>
+        <input
+          type="radio"
+          name="israeliresident?"
+          class="israeliresident"
+          id="israeliresident"
+          value="yes"
+        />
+        <label for="israeliresident">כן</label>
+        <input
+          type="radio"
+          name="israeliresident?"
+          class="israeliresident"
+          id="notisraeliresident"
+          value="not"
+        />
+        <label for="israeliresident" id="lo">לא</label>
+      </fieldset>
+
+      <br /><br />
+
+      <table>
+        <caption>
+          ג. פרטים על ילדי שבשנת המס טרם מלאו להם 19 שנה (עפ”י ספח תעודת זהות)
+        </caption>
+        <thead>
+          <tr>
+            <th>שם</th>
+            <th>מספר זהות</th>
+            <th>תאריך לידה</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="nametabel1" /></td>
+            <td><input type="text" name="idtable1" /></td>
+            <td><input type="date" name="datebirthtable1" /></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="nametabel2" /></td>
+            <td><input type="text" name="idtable2" /></td>
+            <td><input type="date" name="datebirthtable2" /></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="nametabel3" /></td>
+            <td><input type="text" name="idtable3" /></td>
+            <td><input type="date" name="datebirthtable3" /></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="nametabel4" /></td>
+            <td><input type="text" name="idtable4" /></td>
+            <td><input type="date" name="datebirthtable4" /></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="nametabel5" /></td>
+            <td><input type="text" name="idtable5" /></td>
+            <td><input type="date" name="datebirthtable5" /></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br /><br /><br />
+      <fieldset id="part-d" style="background-color: bisque">
+        <legend>ד. פרטים על הכנסותיי ממעסיק זה</legend>
+        <p>אני מקבל/ת: (ראה הסברים מעבר לדף)</p>
+        <input
+          type="checkbox"
+          name="monthlysalary"
+          id="monthlysalary"
+          value="monthlysalary"
+        />
+        <label for="monthlysalary">משכורת חודש</label>
+        <input
+          type="checkbox"
+          name="partialpay"
+          id="partialpay"
+          value="partialpay"
+        />
+        <label for="partialpay">משכורת חלקית</label>
+        <input type="checkbox" name="salary" id="salary" value="salary" />
+        <label for="salary">שכר עבודה (עובד יומי)</label>
+        <input
+          type="checkbox"
+          name="Scholarship"
+          id="Scholarship"
+          value="Scholarship"
+        />
+        <label for="Scholarship">מלגה</label>
+        <input
+          type="checkbox"
+          name="Allowance"
+          id="Allowance"
+          value="Allowance"
+        />
+        <label for="Allowance">קצבה</label>
+        <input
+          type="checkbox"
+          name="salaryadditionalposition"
+          id="salaryadditionalposition"
+          value="salaryadditionalposition"
+        />
+        <label for="salaryadditionalposition"> משכורת בעד משרה נוספת</label>
+
+        <br /><br /><br />
+        <label for="dateyeartax">תאריך תחילה העבודה בשנת המס :</label>
+        <input type="date" name="dateyeartax2" id="dateyeartax2" />
+      </fieldset>
+
+      <br /><br />
+
+      <fieldset id="part-e" style="background-color: bisque">
+        <legend>ה. פרטים על הכנסות אחרות</legend>
+        <input
+          type="checkbox"
+          name="nootherincome"
+          id="nootherincome"
+          value="nootherincome"
+        />
+        <label for="nootherincome"
+          >אין לי הכנסות אחרות ממשכורת (משכורת חודש, בעד משרה (1) נוספת, משכורת
+          חלקית, שכר עבודה), מקצבה וממלגה</label
+        >
+      </fieldset>
+
+      <br /><br />
+
+      <fieldset id="part-f" style="background-color: bisque">
+        <legend>ו. פרטים על בן/בת הזוג</legend>
+
+        <label for="idSpouse">מספר זהות (9 ספרות)</label>
+        <input type="number" name="idspouse" id="idspouse" />
+        <label for="surnamespous">שם משפחה</label>
+        <input type="text" name="surnamespouse" id="surnamespous" />
+        <label for="firstnamespouse">שם פרטי</label>
+        <input type="text" name="firstnamespouse" id="firstnamespouse" />
+        <br /><br />
+        <label for="datebirthspouse">תאריך לידה</label>
+        <input type="date" name="datebirthspouse" id="datebirthspouse" />
+        <label for="dateincreasespouse">תאריך עליה</label>
+        <input type="date" name="dateincreasespouse" id="dateincreasespouse" />
+        <label for="passport">מספר דרכון (למי שאין מספר זהות)</label>
+        <input type="number" name="passport" id="passport" />
+      </fieldset>
+
+      <br /><br />
+
+      <table>
+        <caption>
+          ז. שינויים במהלך השנה (כולל שינויים הקשורים לבקשה להקלה בחישוב המס
+          מעבר לדף)
+        </caption>
+        <thead>
+          <tr>
+            <th>תאריך השינוי</th>
+            <th>פרטי השינוי</th>
+            <th>תאריך הודעה</th>
+            <th>חתימת העובד/ת</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input
+                type="date"
+                name="datemodificationsinyear1"
+                id="datemodificationsinyear1"
+              />
+            </td>
+            <td>
+              <input type="text" name="detailschange1" id="detailschange1" />
+            </td>
+            <td>
+              <input
+                type="date"
+                name="dateannouncement1"
+                id="dateannouncement1"
+              />
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="date"
+                name="datemodificationsinyear2"
+                id="datemodificationsinyear2"
+              />
+            </td>
+            <td>
+              <input type="text" name="detailschange2" id="detailschange2" />
+            </td>
+            <td>
+              <input
+                type="date"
+                name="dateannouncement2"
+                id="dateannouncement2"
+              />
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="date"
+                name="datemodificationsinyear3"
+                id="datemodificationsinyear3"
+              />
+            </td>
+            <td>
+              <input type="text" name="detailschange3" id="detailschange3" />
+            </td>
+            <td>
+              <input
+                type="date"
+                name="dateannouncement3"
+                id="dateannouncement3"
+              />
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br /><br />
+
+      <fieldset id="part-g" style="background-color: bisque">
+        <legend>
+          ח. אני מבקש/ת פטור או זיכוי ממס מהסיבות הבאות (סמן/י √ בריבוע המתאים)
+        </legend>
+
+        <input type="checkbox" name="haimtosav?" id="haimtosav?" />
+        <label for="haimtosav?"> אני תושב/ת ישראל.</label>
+
+        <br />
+        <hr />
+
+        <input type="checkbox" name="areyoudisabled?" id="areyoudisabled?" />
+        <label for="areyoudisabled?"
+          >אני נכה %100 / עיוור/ת לצמיתות. מצורף אישור משרד הביטחון/האוצר/פקיד
+          השומה/תעודת עיוור שהוצאה לאחר 94.1.1. אם לא סומן בפרק ה כי "אין לי
+          הכנסות אחרות לרבות מלגות" העובד יופנה לפקיד השומה לעריכת תיאום מס.
+        </label>
+        <hr />
+        <input
+          type="checkbox"
+          name="permanentresident?"
+          id="permanentresident?"
+        />
+
+        <label for="permanentresident?"
+          >אני תושב/ת קבוע/ה בישוב מזכה מתאריך
+          <input
+            type="date"
+            name="permanentresidentsince"
+            id="permanentresidentsince"
+          />
+        </label>
+      </fieldset>
+    </form>
   </body>
+  <footer>
+    <p>index</p>
+    <ul>
+      <li><a href="/index.html">back to index</a></li>
+    </ul>
+  </footer>
 </html>
