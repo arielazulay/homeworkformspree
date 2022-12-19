@@ -141,11 +141,13 @@
         />
         <label for="israeliresident" id="lo">לא</label>
       </fieldset>
-      <h3>
-        ג. פרטים על ילדי שבשנת המס טרם מלאו להם 19 שנה (עפ”י ספח תעודת זהות)
-      </h3>
+
+      <br /><br />
 
       <table>
+        <caption>
+          ג. פרטים על ילדי שבשנת המס טרם מלאו להם 19 שנה (עפ”י ספח תעודת זהות)
+        </caption>
         <thead>
           <tr>
             <th>שם</th>
@@ -265,11 +267,13 @@
         <input type="number" name="passport" id="passport" />
       </fieldset>
 
-      <h3>
-        ז. שינויים במהלך השנה (כולל שינויים הקשורים לבקשה להקלה בחישוב המס מעבר
-        לדף)
-      </h3>
+      <br /><br />
+
       <table>
+        <caption>
+          ז. שינויים במהלך השנה (כולל שינויים הקשורים לבקשה להקלה בחישוב המס
+          מעבר לדף)
+        </caption>
         <thead>
           <tr>
             <th>תאריך השינוי</th>
@@ -362,6 +366,20 @@
           הכנסות אחרות לרבות מלגות" העובד יופנה לפקיד השומה לעריכת תיאום מס.
         </label>
         <hr />
+        <input
+          type="checkbox"
+          name="permanentresident?"
+          id="permanentresident?"
+        />
+
+        <label for="permanentresident?"
+          >אני תושב/ת קבוע/ה בישוב מזכה מתאריך
+          <input
+            type="date"
+            name="permanentresidentsince"
+            id="permanentresidentsince"
+          />
+        </label>
       </fieldset>
     </form>
   </body>
