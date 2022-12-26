@@ -47,3 +47,8 @@ caption {
 #a-101 {
   font-size: medium;
 }
+.sand {
+  margin: 20px 150px 0px 0px;
+  border-radius: 15px;
+  background-color: bisque;
+}
